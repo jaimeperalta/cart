@@ -90,10 +90,11 @@ export class HeaderComponent implements OnInit {
   }
 
   setActiveCommponent(){
-    let elements = document.getElementsByClassName("ant-menu-item-selected");
+    let elements = document.getElementsByClassName("ant-menu-item-selected") ;
     for(let i in elements){
-     elements[i].classList.toggle("ant-menu-item-selected",false);
+     if(elements[i].classList)elements[i].classList.toggle("ant-menu-item-selected",false);
     }
+
     switch(this.lastComponentLoaded){
       case "cart":
         document.getElementsByClassName("cartP")[0].classList.toggle("ant-menu-item-selected",true);
