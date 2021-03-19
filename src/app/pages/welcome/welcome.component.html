@@ -1,0 +1,7 @@
+<div nz-row>
+  <div nz-col nzSpan="24">
+    <app-header (componentLoad)="setComponent($event)"></app-header>
+    <app-product-list *ngIf="component == 'productList'"></app-product-list>
+    <app-carrito *ngIf="component == 'cart'"></app-carrito>
+  </div>
+</div>
